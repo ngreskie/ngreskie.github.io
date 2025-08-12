@@ -1,4 +1,4 @@
 title: "Noah Greskiewicz Portfolio"
 description: "Mechanical Engineering projects & resume"
-baseurl: "" # leave blank for root
+baseurl: "/website" # leave blank for root
 url: "https://ngreskie.github.io/website"
