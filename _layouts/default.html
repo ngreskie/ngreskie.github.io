@@ -1,14 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{{ page.title }} | {{ site.title }}</title>
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <meta name="description" content="{{ site.description }}" />
+  
+  <!-- Google Fonts: Roboto -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
 </head>
 <body>
-  {% include header.html %}
-  <main>
+  <header>
+    <div class="container">
+      <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+      <nav>
+        <ul>
+          <li><a href="{{ '/' | relative_url }}">Home</a></li>
+          <li><a href="{{ '/about.html' | relative_url }}">About</a></li>
+          <li><a href="{{ '/projects.html' | relative_url }}">Projects</a></li>
+          <li><a href="{{ '/contact.html' | relative_url }}">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
     {{ content }}
   </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; {{ site.time | date: "%Y" }} {{ site.author.name }} | Mechanical Engineering Portfolio</p>
+    </div>
+  </footer>
 </body>
 </html>
