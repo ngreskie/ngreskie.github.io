@@ -20,7 +20,7 @@ body {
 
 /* Header */
 header {
-  background: #0055cc;
+  background: #283950;
   color: white;
   padding: 20px 0;
   margin-bottom: 40px;
@@ -61,7 +61,7 @@ main h1 {
 main h2 {
   margin-top: 2rem;
   margin-bottom: 1rem;
-  color: #0055cc;
+  color: #133d78;
 }
 
 main p, main li {
