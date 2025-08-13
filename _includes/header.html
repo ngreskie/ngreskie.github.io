@@ -1,13 +1,19 @@
-<header>
-  <div class="container">
-    <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
-    <nav>
-      <ul>
-        <li><a href="{{ '/' | relative_url }}">Home</a></li>
-        <li><a href="{{ '/projects.html' | relative_url }}">Projects</a></li>
-        <li><a href="{{ '/about.html' | relative_url }}">About</a></li>
-        <li><a href="{{ '/contact.html' | relative_url }}">Contact</a></li>
-      </ul>
-    </nav>
+<header class="site-header">
+  <div class="site-header__title">Noah Greskiewicz</div>
+  <div class="menu-icon" id="menuToggle">
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
 </header>
+
+<!-- Fullscreen Menu Overlay -->
+<nav class="menu-overlay" id="menuOverlay">
+  <div class="menu-close" id="menuClose">&times;</div>
+  <ul class="menu-links">
+    <li><a href="{{ '/' | relative_url }}">Home</a></li>
+    <li><a href="{{ '/about' | relative_url }}">About</a></li>
+    <li><a href="{{ '/projects' | relative_url }}">Projects</a></li>
+    <li><a href="{{ '/contact' | relative_url }}">Contact</a></li>
+  </ul>
+</nav>
