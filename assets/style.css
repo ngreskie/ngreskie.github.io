@@ -79,10 +79,10 @@ footer {
   height: 70px;
   display: flex;
   align-items: center;
-  justify-content: center; /* center the title */
-  background: rgba(0,0,0,0.85);
-  padding: 0 2rem;
+  justify-content: center; /* centers title */
+  background: rgba(0, 0, 0, 0.85);
   z-index: 1000;
+  padding: 0 2rem;
 }
 
 .site-header__title {
@@ -90,11 +90,12 @@ footer {
   font-weight: 600;
   color: #fff;
   text-align: center;
+  pointer-events: none; /* optional: don’t block menu click */
 }
 
 .menu-icon {
-  position: absolute; /* sits outside flex flow */
-  right: 2rem;        /* stays on the right edge */
+  position: absolute; /* floats on right */
+  right: 2rem;
   top: 50%;
   transform: translateY(-50%);
   width: 30px;
@@ -103,6 +104,7 @@ footer {
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
+  z-index: 1100;
 }
 
 .menu-icon span {
