@@ -3,16 +3,12 @@ layout: default
 title: Home
 ---
 
-<!-- AOS CSS -->
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-
-<section id="hero" data-aos="fade-up">
+<section id="hero" data-aos="fade-up" class="fade-in">
   <h1>Welcome to My Engineering Portfolio</h1>
   <p>Mechanical engineering student passionate about design, manufacturing, and innovation.</p>
 </section>
 
-<section id="projects" data-aos="fade-up">
+<section id="projects" data-aos="fade-up" class="fade-in">
   <h2>Featured Projects</h2>
   <div class="project-card" data-aos="fade-right">
     <h3>Injection Mold Design</h3>
@@ -28,22 +24,12 @@ title: Home
   </div>
 </section>
 
-<section id="about" data-aos="fade-up">
+<section id="about" data-aos="fade-up" class="fade-in">
   <h2>About Me</h2>
   <p>Hi, I'm Noah. I specialize in mechanical design and manufacturing, and I enjoy creating tools that make processes more efficient.</p>
 </section>
 
-<section id="contact" data-aos="fade-up">
+<section id="contact" data-aos="fade-up" class="fade-in">
   <h2>Contact</h2>
   <p>Want to get in touch? Email me at <a href="mailto:noahgreskiewicz@gmail.com">noahgreskiewicz@gmail.com</a>.</p>
 </section>
-
-
-<!-- AOS JS -->
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 1000,
-    once: true,
-  });
-</script>
