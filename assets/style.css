@@ -96,16 +96,17 @@ footer {
   right: 25px;
   top: 50%;
   transform: translateY(-50%);
-  width: 24px;
+  width: 40px;  /* increase width */
+  height: 40px; /* ensure it has height */
   cursor: pointer;
-  border: orangered 2px solid;
+  background: rgba(255,0,0,0.3); /* semi-transparent red background for debugging */
 }
 
 .menu-icon span {
   display: block;
-  height: 3px;
+  height: 5px;
   background: #fff;
-  margin: 5px 0;
+  margin: 6px 0;
   transition: 0.3s;
 }
 
