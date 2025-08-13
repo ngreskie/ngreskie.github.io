@@ -184,14 +184,22 @@ footer {
 }
 
 .menu-close {
-  position: absolute;
-  top: 25px;
-  right: 30px;
-  font-size: 2.5rem;
+  position: fixed;
+  top: 35px;
+  right: 2rem;
+  font-size: 2rem;
   color: #fff;
   cursor: pointer;
   line-height: 1;
-  transition: color 0.3s ease;
+  z-index: 2100;
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.8);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.menu-overlay.active .menu-close {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
 }
 
 .menu-close:hover {
@@ -246,26 +254,7 @@ footer {
   .menu-icon {
     right: 1rem;
   }
-  
-.menu-close {
-  position: fixed;
-  top: 35px;
-  right: 2rem;
-  font-size: 2rem;
-  color: #fff;
-  cursor: pointer;
-  line-height: 1;
-  z-index: 2100;
-  opacity: 0;
-  transform: rotate(-90deg) scale(0.8);
-  transition: opacity 0.4s ease, transform 0.4s ease;
-}
 
-.menu-overlay.active .menu-close {
-  opacity: 1;
-  transform: rotate(0deg) scale(1);
-}
-  
   .menu-links a {
     font-size: 1.5rem;
   }
