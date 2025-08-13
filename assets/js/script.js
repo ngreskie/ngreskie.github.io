@@ -49,3 +49,18 @@ document.addEventListener('DOMContentLoaded', function () {
     link.addEventListener('click', closeMenu);
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const title = document.querySelector(".site-header__title");
+  if (!title) return;
+
+  // Split the name into span.letter
+  const text = title.textContent;
+  title.innerHTML = text.split("").map(c => `<span class="letter">${c}</span>`).join("");
+
+  // Trigger animation on page load
+  const letters = title.querySelectorAll(".letter");
+  letters.forEach((letter, i) => {
+    letter.style.animation = `letterFloat 0.6s ease-in-out ${i * 0.1}s forwards`;
+  });
+});
