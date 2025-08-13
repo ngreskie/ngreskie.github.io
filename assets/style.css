@@ -1,4 +1,7 @@
 /* Global styles */
+main.container {
+  padding-top: 90px;
+}
 body {
   background-color: #000;
   color: #fff;
