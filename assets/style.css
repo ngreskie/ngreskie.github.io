@@ -77,10 +77,10 @@ footer {
   left: 0;
   width: 100%;
   height: 70px;
-  background: transparent;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between; /* space between title and menu */
+  padding: 0 2rem;               /* add horizontal padding */
   z-index: 1000;
 }
 
@@ -92,22 +92,19 @@ footer {
 }
 
 .menu-icon {
-  position: absolute;
-  right: 25px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 40px;  /* increase width */
-  height: 40px; /* ensure it has height */
   cursor: pointer;
-  background: rgba(255,0,0,0.3); /* semi-transparent red background for debugging */
+  width: 30px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .menu-icon span {
   display: block;
-  height: 5px;
+  height: 3px;
   background: #fff;
-  margin: 6px 0;
-  transition: 0.3s;
+  border-radius: 2px;
 }
 
 /* FULLSCREEN MENU OVERLAY */
