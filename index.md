@@ -6,16 +6,6 @@ title: Home
 <!-- AOS CSS -->
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-<header>
-  <nav>
-    <div class="logo">Noah Greskiewicz</div>
-    <div class="links">
-      <a href="#projects">Projects</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
-</header>
 
 <section id="hero" data-aos="fade-up">
   <h1>Welcome to My Engineering Portfolio</h1>
@@ -48,9 +38,6 @@ title: Home
   <p>Want to get in touch? Email me at <a href="mailto:youremail@example.com">youremail@example.com</a>.</p>
 </section>
 
-<footer>
-  &copy; {{ site.time | date: "%Y" }} {{ site.author.name }} | Mechanical Engineering Portfolio
-</footer>
 
 <!-- AOS JS -->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
