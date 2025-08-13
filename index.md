@@ -35,7 +35,7 @@ title: Home
 
 <section id="contact" data-aos="fade-up">
   <h2>Contact</h2>
-  <p>Want to get in touch? Email me at <a href="mailto:youremail@example.com">youremail@example.com</a>.</p>
+  <p>Want to get in touch? Email me at <a href="mailto:noahgreskiewicz@gmail.com">noahgreskiewicz@gmail.com</a>.</p>
 </section>
 
 
