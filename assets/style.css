@@ -11,6 +11,11 @@ body {
   line-height: 1.6;
 }
 
+/* Prevent background scroll when menu is open */
+body.menu-open {
+  overflow: hidden;
+}
+
 header {
   position: sticky;
   top: 0;
@@ -129,13 +134,15 @@ footer {
   justify-content: center;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.4s ease;
+  transform: scale(1.05); /* slight zoom-out animation start */
+  transition: opacity 0.4s ease, transform 0.4s ease;
   z-index: 2000;
 }
 
 .menu-overlay.active {
   opacity: 1;
   pointer-events: auto;
+  transform: scale(1); /* smooth zoom-in */
 }
 
 .menu-close {
