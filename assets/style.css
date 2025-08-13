@@ -99,7 +99,7 @@ footer {
   background: rgba(0, 0, 0, 0.85);
   backdrop-filter: blur(10px);
   z-index: 1000;
-  padding: 0 2rem;
+  padding: 15px 2rem 0 2rem;
   box-sizing: border-box; /* Ensures padding doesn't add to width */
 }
 
