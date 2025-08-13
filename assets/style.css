@@ -67,6 +67,11 @@ h1, h2 {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
 }
 
+
+
+
+
+
 /* Footer */
 footer {
   text-align: center;
@@ -74,6 +79,12 @@ footer {
   color: rgba(255, 255, 255, 0.6);
   font-size: 0.9rem;
 }
+
+
+
+
+
+
 
 /* HEADER */
 .site-header {
@@ -140,6 +151,11 @@ footer {
 .menu-icon.active span:nth-child(3) {
   transform: rotate(-45deg) translate(7px, -6px);
 }
+
+
+
+
+
 
 /* FULLSCREEN MENU OVERLAY */
 .menu-overlay {
@@ -231,16 +247,23 @@ footer {
     right: 1rem;
   }
   
- .menu-close {
+.menu-close {
   position: fixed;
-  top: 35px;              /* Half of your 70px header height */
-  right: 2rem;            /* Same as your hamburger */
+  top: 35px;
+  right: 2rem;
   font-size: 2rem;
   color: #fff;
   cursor: pointer;
   line-height: 1;
-  transition: color 0.3s ease;
   z-index: 2100;
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.8);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.menu-overlay.active .menu-close {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
 }
   
   .menu-links a {
