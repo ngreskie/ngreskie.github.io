@@ -185,10 +185,10 @@ footer {
 
 .menu-close {
   position: fixed;
-  top: 35px;
+  top: 25px;
   right: 2rem;
-  width: 2rem;           /* Fixed width */
-  height: 2rem;          /* Fixed height */
+  width: 3rem;           /* Fixed width */
+  height: 3rem;          /* Fixed height */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -204,7 +204,7 @@ footer {
 
 .menu-overlay.active .menu-close {
   opacity: 1;
-  transform: rotate(0deg) scale(1);
+  transform: rotate(15deg) scale(1);
 }
 
 .menu-close:hover {
