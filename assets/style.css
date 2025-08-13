@@ -79,33 +79,30 @@ footer {
   height: 70px;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* space between left, center, right */
+  justify-content: center; /* center the title */
+  background: rgba(0,0,0,0.85);
   padding: 0 2rem;
   z-index: 1000;
 }
 
-/* Add a left spacer div in HTML to balance the flex */
-.site-header__spacer {
-  width: 30px; /* same width as menu-icon */
-}
-
-/* Title stays centered */
 .site-header__title {
   font-size: 1.8rem;
   font-weight: 600;
   color: #fff;
   text-align: center;
-  flex: 1; /* allow it to take up center space */
 }
 
-/* Menu icon on right */
 .menu-icon {
-  cursor: pointer;
+  position: absolute; /* sits outside flex flow */
+  right: 2rem;        /* stays on the right edge */
+  top: 50%;
+  transform: translateY(-50%);
   width: 30px;
   height: 25px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .menu-icon span {
