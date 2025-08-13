@@ -84,10 +84,12 @@ footer {
   height: 70px;
   display: flex;
   align-items: center;
-  justify-content: center; /* centers title */
+  justify-content: center;
   background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
   z-index: 1000;
   padding: 0 2rem;
+  box-sizing: border-box; /* Ensures padding doesn't add to width */
 }
 
 .site-header__title {
@@ -95,11 +97,11 @@ footer {
   font-weight: 600;
   color: #fff;
   text-align: center;
-  pointer-events: none; /* optional: don’t block menu click */
+  pointer-events: none;
 }
 
 .menu-icon {
-  position: absolute; /* floats on right */
+  position: absolute;
   right: 2rem;
   top: 50%;
   transform: translateY(-50%);
@@ -110,13 +112,33 @@ footer {
   justify-content: space-between;
   cursor: pointer;
   z-index: 1100;
+  transition: all 0.3s ease;
+}
+
+.menu-icon:hover {
+  opacity: 0.7;
 }
 
 .menu-icon span {
   display: block;
   height: 3px;
+  width: 100%;
   background: #fff;
   border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger animation when menu is active */
+.menu-icon.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-icon.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-icon.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
 }
 
 /* FULLSCREEN MENU OVERLAY */
@@ -124,8 +146,8 @@ footer {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw; /* Use viewport width */
+  height: 100vh; /* Use viewport height */
   background: rgba(10, 10, 10, 0.95);
   backdrop-filter: blur(8px);
   display: flex;
@@ -133,16 +155,16 @@ footer {
   align-items: center;
   justify-content: center;
   opacity: 0;
-  pointer-events: none;
-  transform: scale(1.05); /* slight zoom-out animation start */
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  visibility: hidden; /* Better than pointer-events for accessibility */
+  transform: scale(1.05);
+  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease;
   z-index: 2000;
 }
 
 .menu-overlay.active {
   opacity: 1;
-  pointer-events: auto;
-  transform: scale(1); /* smooth zoom-in */
+  visibility: visible;
+  transform: scale(1);
 }
 
 .menu-close {
@@ -152,35 +174,48 @@ footer {
   font-size: 2.5rem;
   color: #fff;
   cursor: pointer;
+  line-height: 1;
+  transition: color 0.3s ease;
+}
+
+.menu-close:hover {
+  color: #ccc;
 }
 
 .menu-links {
   list-style: none;
   padding: 0;
+  margin: 0;
   text-align: center;
 }
 
 .menu-links li {
+  margin: 1.5rem 0;
   opacity: 0;
   transform: translateY(20px);
+}
+
+/* Animation when menu becomes active */
+.menu-overlay.active .menu-links li {
   animation: fadeUp 0.5s forwards;
 }
 
-.menu-links li:nth-child(1) { animation-delay: 0.1s; }
-.menu-links li:nth-child(2) { animation-delay: 0.25s; }
-.menu-links li:nth-child(3) { animation-delay: 0.4s; }
-.menu-links li:nth-child(4) { animation-delay: 0.55s; }
+.menu-overlay.active .menu-links li:nth-child(1) { animation-delay: 0.1s; }
+.menu-overlay.active .menu-links li:nth-child(2) { animation-delay: 0.25s; }
+.menu-overlay.active .menu-links li:nth-child(3) { animation-delay: 0.4s; }
+.menu-overlay.active .menu-links li:nth-child(4) { animation-delay: 0.55s; }
 
 .menu-links a {
   font-size: 2rem;
   color: #fff;
   text-decoration: none;
-  margin: 15px 0;
-  transition: color 0.2s;
+  display: block;
+  padding: 0.5rem 1rem;
+  transition: color 0.2s ease;
 }
 
 .menu-links a:hover {
-  color: #aaa;
+  color: #0a84ff; /* Match your theme color */
 }
 
 @keyframes fadeUp {
@@ -189,3 +224,20 @@ footer {
     transform: translateY(0);
   }
 }
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .menu-icon {
+    right: 1rem;
+  }
+  
+  .menu-close {
+    right: 20px;
+    top: 20px;
+  }
+  
+  .menu-links a {
+    font-size: 1.5rem;
+  }
+}
+
