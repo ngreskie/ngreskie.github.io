@@ -187,8 +187,8 @@ footer {
   position: fixed;
   top: 35px;
   right: 2rem;
-  width: 30px;           /* Same as hamburger */
-  height: 25px;          /* Same as hamburger */ 
+  width: 2rem;           /* Fixed width */
+  height: 2rem;          /* Fixed height */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -198,9 +198,8 @@ footer {
   line-height: 1;
   z-index: 2100;
   opacity: 0;
-  transform: rotate(-90deg) scale(0.8);
-  transform-origin: center center;
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform: rotate(45deg) scale(0);
+  transition: opacity 0.3s ease, transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .menu-overlay.active .menu-close {
