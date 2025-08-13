@@ -79,18 +79,26 @@ footer {
   height: 70px;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* space between title and menu */
-  padding: 0 2rem;               /* add horizontal padding */
+  justify-content: space-between; /* space between left, center, right */
+  padding: 0 2rem;
   z-index: 1000;
 }
 
+/* Add a left spacer div in HTML to balance the flex */
+.site-header__spacer {
+  width: 30px; /* same width as menu-icon */
+}
+
+/* Title stays centered */
 .site-header__title {
   font-size: 1.8rem;
   font-weight: 600;
   color: #fff;
   text-align: center;
+  flex: 1; /* allow it to take up center space */
 }
 
+/* Menu icon on right */
 .menu-icon {
   cursor: pointer;
   width: 30px;
