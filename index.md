@@ -5,7 +5,7 @@ title: Home
 
 <nav class="main-nav">
     <button class="nav-btn active" onclick="showSection('home')">Home</button>
-    <button class="nav-btn" onclick="showSection('projects')">All Projects</button>
+    <button class="nav-btn" onclick="showSection('all-projects')">All Projects</button>
 </nav>
 
 <!-- HOME SECTION -->
@@ -36,7 +36,7 @@ title: Home
 </div>
 
 <!-- PROJECTS SECTION -->
-<div id="projects" class="section">
+<div id="all-projects" class="section">
     <section>
         <h2>All Projects</h2>
         {% for project in site.data.projects %}
