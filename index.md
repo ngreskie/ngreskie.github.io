@@ -31,7 +31,7 @@ title: Home
 
     <section id="contact" data-aos="fade-up" class="fade-in">
         <h2>Contact</h2>
-        <p>Want to get in touch? Email me at <a href="mailto:noahgreskiewicz@gmail.com">noahgreskiewicz@gmail.com</a>.</p>
+        <p>Want to get in touch? Email me at <a href="mailto:noahgreskiewicz@gmail.com" style="color: #0a84ff;">noahgreskiewicz@gmail.com</a>.</p>
     </section>
 </div>
 
