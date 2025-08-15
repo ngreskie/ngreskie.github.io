@@ -11,7 +11,7 @@ title: Home
 <!-- HOME SECTION -->
 <div id="home" class="section active">
     <section id="hero" data-aos="fade-up" class="fade-in">
-        <h1>Welcome to My Engineering Portfolio</h1>
+        <h1>Welcome to my Portfolio</h1>
         <p>Mechanical engineering student passionate about design, manufacturing, and innovation.</p>
     </section>
     
