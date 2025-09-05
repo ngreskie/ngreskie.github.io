@@ -43,7 +43,7 @@ testing-rig:
   id: "testing-rig"
   title: "Mechanical Testing Rig"
   shortDescription: "Designed and built a benchtop rig for material fatigue testing."
-  date: "2023"
+  date: "2025"
   status: "In Progress"
   tags: ["Mechanical Design", "Testing", "Materials", "Circuit Design"]
   featured: true
