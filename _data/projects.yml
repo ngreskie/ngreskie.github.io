@@ -1,3 +1,28 @@
+power-supply:
+  id: "power-supply"
+  title: "Benchtop Power Supply"
+  shortDescription: "Designed, manufactured, and built a benchtop power supply for electronics projects and repairs."
+  date: "2025"
+  status: "In Progress"
+  tags: ["Mechanical Design", "Testing", "Materials", "Circuit Design"]
+  featured: false
+  fullDescription: |
+    ### Project Overview
+    Designed and constructed a custom mechanical testing rig capable of performing fatigue tests on various materials under controlled loading conditions.
+
+testing-rig:
+  id: "testing-rig"
+  title: "Mechanical Testing Rig"
+  shortDescription: "Designed and built a benchtop rig for material fatigue testing."
+  date: "2025"
+  status: "In Progress"
+  tags: ["Power Electronics", "Circuit Design", "Embedded Systems", "Testing Equipment"]
+  featured: false
+  fullDescription: |
+    ### Project Overview
+    Designed and constructed a custom mechanical testing rig capable of performing fatigue tests on various materials under controlled loading conditions.
+  
+
 injection-mold:
   id: "injection-mold"
   title: "Injection Mold Design"
@@ -39,15 +64,3 @@ cnc-automation:
     ### Impact
     The tool reduced program setup time and improved production planning accuracy by providing insights into machining operations.
 
-testing-rig:
-  id: "testing-rig"
-  title: "Mechanical Testing Rig"
-  shortDescription: "Designed and built a benchtop rig for material fatigue testing."
-  date: "2025"
-  status: "In Progress"
-  tags: ["Mechanical Design", "Testing", "Materials", "Circuit Design"]
-  featured: true
-  fullDescription: |
-    ### Project Overview
-    Designed and constructed a custom mechanical testing rig capable of performing fatigue tests on various materials under controlled loading conditions.
-  
