@@ -1,81 +1,53 @@
 injection-mold:
   id: "injection-mold"
   title: "Injection Mold Design"
-  shortDescription: "Developed a custom injection mold for a complex plastic component, optimizing cycle time and material usage."
+  shortDescription: "Developed a custom injection mold for a plastic coaster."
   date: "2024"
   status: "Completed"
   tags: ["CAD", "Manufacturing", "Plastic"]
   featured: true
   fullDescription: |
     ### Project Overview
-    This project involved designing a comprehensive injection molding solution for a complex automotive component. The challenge was to create a mold that could produce high-quality parts while minimizing cycle time and material waste.
+    This project involved designing a set of injection molds for use with community plastic injection machines. The challenge was to ensure the vision for the final product was achievable with manufacturing constraints while minimizing material waste and post-processing.
     
     ### Design Process
-    Started with detailed analysis of the component geometry and material properties. Used SolidWorks for 3D modeling and simulation to optimize gate placement, cooling channels, and ejection mechanisms.
+    Started with analysis of the injection machine including shot size and nozzle geometry. Used SolidWorks for 3D modeling and simulation.
     
     ### Key Achievements
-    - Reduced cycle time by 23% compared to initial estimates
-    - Achieved 99.2% part quality rating in production trials
-    - Optimized cooling system reduced energy consumption by 15%
-    - Implemented conformal cooling channels using 3D printing
+    - Successful products produced with first mold iteration.
     
     ### Technical Details
-    The mold featured a complex three-plate design with hydraulic core pulls and a hot runner system. Material flow analysis ensured optimal filling patterns and minimized weld lines in critical stress areas.
+    ...
 
 cnc-automation:
   id: "cnc-automation"
   title: "CNC Automation Tool"
-  shortDescription: "Created a Python automation tool to parse CNC programs and streamline manufacturing workflows."
+  shortDescription: "Created a Python automation tool to parse CNC programs and assist in manufacturing workflows."
   date: "2024"
   status: "Completed"
   tags: ["Python", "Automation", "CNC"]
   featured: true
   fullDescription: |
     ### Project Overview
-    Developed a comprehensive Python-based tool to automate CNC program analysis and optimize manufacturing workflows. The tool parses G-code files and provides detailed insights for production planning.
+    Developed a comprehensive Python-based tool to automate CNC program analysis and optimize manufacturing workflows. The tool searches machine code folders, parses G-code files, and provides detailed insights for production planning.
     
     ### Features
-    - G-code parsing and validation
-    - Cycle time estimation
-    - Tool usage analysis
-    - Material calculation
-    - Production scheduling optimization
+    - G-code parsing
+    - Tool/Setup Sheet generation
+    - Material usage calculation
     
     ### Impact
-    The tool reduced program setup time by 40% and improved production planning accuracy by providing real-time insights into machining operations.
+    The tool reduced program setup time and improved production planning accuracy by providing insights into machining operations.
 
 testing-rig:
   id: "testing-rig"
   title: "Mechanical Testing Rig"
   shortDescription: "Designed and built a benchtop rig for material fatigue testing."
   date: "2023"
-  status: "Completed"
-  tags: ["Mechanical Design", "Testing", "Materials"]
+  status: "In Progress"
+  tags: ["Mechanical Design", "Testing", "Materials", "Circuit Design"]
   featured: true
   fullDescription: |
     ### Project Overview
     Designed and constructed a custom mechanical testing rig capable of performing fatigue tests on various materials under controlled loading conditions.
-    
-    ### Design Features
-    - Variable load amplitude control
-    - Real-time data acquisition
-    - Specimen temperature monitoring
-    - Automated test termination
-    
-    ### Results
-    Successfully validated against known material properties and is now used for ongoing research projects in materials characterization.
-
-heat-exchanger:
-  id: "heat-exchanger"
-  title: "Heat Exchanger Optimization"
-  shortDescription: "Optimized heat exchanger design using CFD analysis to improve thermal efficiency."
-  date: "2023"
-  status: "In Progress"
-  tags: ["CFD", "Thermal", "Optimization"]
-  featured: false
-  fullDescription: |
-    ### Project Overview
-    Currently working on optimizing a plate heat exchanger design using computational fluid dynamics to maximize heat transfer while minimizing pressure drop.
-    
-    ### Methodology
-    Using ANSYS Fluent for CFD analysis and Python for automated design optimization loops.
+  
