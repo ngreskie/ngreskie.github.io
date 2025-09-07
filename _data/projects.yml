@@ -1,26 +1,26 @@
 power-supply:
   id: "power-supply"
   title: "Benchtop Power Supply"
-  shortDescription: "Designed, manufactured, and built a benchtop power supply for electronics projects and repairs."
+  shortDescription: "Designing, manufacturing, and building a benchtop power supply for electronics projects and repairs."
   date: "2025"
   status: "In Progress"
-  tags: ["Mechanical Design", "Testing", "Materials", "Circuit Design"]
+  tags: ["Power Electronics", "Circuit Design", "Embedded Systems"]
   featured: false
   fullDescription: |
     ### Project Overview
-    Designed and constructed a custom mechanical testing rig capable of performing fatigue tests on various materials under controlled loading conditions.
+    ... (Details to be added)
 
 testing-rig:
   id: "testing-rig"
-  title: "Mechanical Testing Rig"
-  shortDescription: "Designed and built a benchtop rig for material fatigue testing."
+  title: "Mechanical Test Frame"
+  shortDescription: "Designed and built a test frame for material fatigue testing."
   date: "2025"
   status: "In Progress"
-  tags: ["Power Electronics", "Circuit Design", "Embedded Systems", "Testing Equipment"]
+  tags: ["Mechanical Design", "Materials", "Circuit Design"]
   featured: false
   fullDescription: |
     ### Project Overview
-    Designed and constructed a custom mechanical testing rig capable of performing fatigue tests on various materials under controlled loading conditions.
+    ... (Details to be added)
   
 
 injection-mold:
