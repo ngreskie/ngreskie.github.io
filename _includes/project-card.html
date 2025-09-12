@@ -1,13 +1,18 @@
 <div class="project-card" onclick="showProject('{{ project[1].id }}')">
+  <div class="project-image">
+    <img src="{{ project[1].image | default: '/assets/images/placeholder.jpg' }}" alt="{{ project[1].title }}" loading="lazy">
+  </div>
+  <div class="project-content">
     <div class="project-meta">
-        <span>{{ project[1].date }}</span>
-        <span>{{ project[1].status }}</span>
+      <span>{{ project[1].date }}</span>
+      <span>{{ project[1].status }}</span>
     </div>
     <h3>{{ project[1].title }}</h3>
     <p>{{ project[1].shortDescription }}</p>
     <div class="project-tags">
-        {% for tag in project[1].tags %}
+      {% for tag in project[1].tags %}
         <span class="project-tag">{{ tag }}</span>
-        {% endfor %}
+      {% endfor %}
     </div>
+  </div>
 </div>

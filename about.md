@@ -5,7 +5,6 @@ title: About
 
 # About Me
 
-Hi, I'm Noah — a mechanical engineering student passionate about mechanical design, manufacturing, and process optimization.  
-I enjoy taking projects from concept through to prototyping and manufacturing, with an emphasis on efficiency and practical problem-solving.
+Hi, I'm Noah — a mechanical engineering student passionate about product design, additive manufacturing, and process optimization. I enjoy taking projects from concept through to manufacturing.
 
-In my free time, I explore CAD design, automation tools, and sustainable engineering solutions.
+Outside of mechanical engineering, I’m interested in machine learning, cybersecurity, and data security. I’m also passionate about the right to repair movement, Linux, and open source projects. I enjoy working on maker projects and repairing devices. I love learning and exploring new ideas.
