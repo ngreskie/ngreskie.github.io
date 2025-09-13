@@ -42,8 +42,14 @@ injection-mold:
     ### Key Achievements
     - Successful products produced with first mold iteration.
     
-    ### Technical Details
-    ...
+    ### SolidWorks Plastic Injection Simulation
+    Relevant Results:
+    - Filling Time: 7.68 seconds
+    - Injection Pressure Required: 1.00 MPa (145.33 psi)
+    Simulation Assumptions:
+    - Melt Temperature: 210°C (410°F)
+    - Mold Wall Temperature: 40°C (104°F)
+
 
 cnc-automation:
   id: "cnc-automation"
