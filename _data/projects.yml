@@ -29,7 +29,7 @@ injection-mold:
   shortDescription: "Developed a custom injection mold for a plastic coaster."
   date: "2024"
   status: "Completed"
-  image: "/assets/images/placeholder.jpg" # Add actual image path later
+  image: "/assets/images/coaster.jpg" # Add actual image path later
   tags: ["CAD", "Manufacturing", "Plastic"]
   featured: true
   fullDescription: |
