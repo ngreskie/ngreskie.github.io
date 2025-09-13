@@ -29,7 +29,7 @@ injection-mold:
   shortDescription: "Developed a custom injection mold for a plastic coaster."
   date: "2024"
   status: "Completed"
-  image: "/assets/images/coaster.jpg" # Add actual image path later
+  image: "/assets/images/coaster.jpg"
   tags: ["CAD", "Manufacturing", "Plastic"]
   featured: true
   fullDescription: |
@@ -50,6 +50,7 @@ cnc-automation:
   title: "CNC Automation Tool"
   shortDescription: "Created a Python automation tool to parse CNC programs and assist in manufacturing workflows."
   date: "2024"
+  image: "/assets/images/code.png"
   status: "Completed"
   tags: ["Python", "Automation", "CNC"]
   featured: true
