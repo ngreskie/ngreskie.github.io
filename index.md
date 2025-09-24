@@ -12,7 +12,7 @@ title: Home
 <div id="home" class="section active">
     <section id="hero" data-aos="fade-up" class="fade-in">
         <h1>Welcome to my Portfolio</h1>
-        <p>Mechanical engineering student passionate about product design, additive manufacturing, and automation.</p>
+        <p>I’m passionate about open-source design and engineering to make ideas tangible and lasting.</p>
     </section>
     
     <section id="projects" data-aos="fade-up" class="fade-in">
