@@ -22,6 +22,17 @@ testing-rig:
     ### Project Overview
     ... (Details to be added)
   
+  pcb-design:
+  id: "pcb-design"
+  title: "PCB Design with ATmega32U4"
+  shortDescription: "Designed, routed, and assembled a custom PCB."
+  date: "2025"
+  status: "Completed"
+  tags: ["PCB Design", "Circuit Design", "Arduino"]
+  featured: true
+  fullDescription: |
+    ### Project Overview
+    As part of Worcester Polytechnic Institute's IEEE chapter, I completed a student-run PCB workshop that culminated in a custom PCB design.
 
 injection-mold:
   id: "injection-mold"
