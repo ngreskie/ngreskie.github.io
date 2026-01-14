@@ -12,7 +12,7 @@ title: Home
 <div id="home" class="section active">
     <section id="hero" data-aos="fade-up" class="fade-in">
         <h1>Welcome to my Portfolio</h1>
-        <p>I’m passionate about open-source design and engineering to make ideas tangible and lasting.</p>
+        <p>I’m passionate about open-source design and engineering.</p>
     </section>
     
     <section id="projects" data-aos="fade-up" class="fade-in">
@@ -26,7 +26,7 @@ title: Home
 
     <section id="about" data-aos="fade-up" class="fade-in">
         <h2>About Me</h2>
-        <p>Hi, I'm Noah. I specialize in mechanical design and manufacturing, and I enjoy creating tools that make processes more efficient.</p>
+        <p>Hi, I'm Noah. I am currently a mechanical engineering student at Worcester Polytechnic Institute. In my free time, I enjoy spending time outside, lifting weights at the gym, playing board games with friends and family, and watching movies and shows.</p>
     </section>
 
     <section id="contact" data-aos="fade-up" class="fade-in">
