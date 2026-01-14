@@ -26,7 +26,7 @@ title: Home
 
     <section id="about" data-aos="fade-up" class="fade-in">
         <h2>About Me</h2>
-        <p>Hi, I'm Noah. I am currently a mechanical engineering student at Worcester Polytechnic Institute. In my free time, I enjoy spending time outside, lifting weights at the gym, playing board games with friends and family, and watching movies and shows.</p>
+        <p>Hi, I'm Noah. I am currently a mechanical engineering student at Worcester Polytechnic Institute. In my free time, I enjoy spending time outside, lifting weights at the gym, playing board games with friends and family, visiting art museums, and watching movies by Wes Anderson.</p>
     </section>
 
     <section id="contact" data-aos="fade-up" class="fade-in">
