@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: #f8f6f4;
+            color: #2a2a2a;
+            line-height: 1.8;
+            min-height: 100vh;
+        }
+
+        header {
+            background: #e8e6e3;
+            color: #2a2a2a;
+            padding: 4.5rem 0 4rem;
+            text-align: center;
+            box-shadow: 0 1px 0 #d4d2cf;
+            border-bottom: 1px solid #2a2a2a;
+            border-top: 1px solid #2a2a2a;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 0.65rem;
+            font-weight: 400;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            animation: fadeInDown 0.8s ease;
+            font-family: 'Georgia', serif;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #5a5a5a;
+            font-weight: 300;
+            font-style: italic;
+            letter-spacing: 0.8px;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .projects-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background: #ffffff;
+            border-radius: 0;
+            overflow: visible;
+            box-shadow: none;
+            transition: none;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            border: 1px solid #d4d2cf;
+            min-height: 220px;
+            margin-bottom: 1rem;
+        }
+
+        .project-card::before {
+            display: none;
+        }
+
+        .project-image {
+            width: 300px;
+            min-width: 300px;
+            height: auto;
+            background: linear-gradient(180deg, #d4d2cf 0%, #b8b6b3 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 3.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: none;
+            border-right: 1px solid #d4d2cf;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .project-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: repeating-linear-gradient(
+                92deg,
+                transparent,
+                transparent 12px,
+                rgba(255,255,255,0.02) 12px,
+                rgba(255,255,255,0.02) 24px
+            );
+            pointer-events: none;
+        }
+
+        .project-image.gradient-1 { background: linear-gradient(175deg, #e8e6e3 0%, #d4d2cf 100%); }
+        .project-image.gradient-2 { background: linear-gradient(178deg, #c4c2bf 0%, #b0aeab 100%); }
+        .project-image.gradient-3 { background: linear-gradient(182deg, #d8d6d3 0%, #c0bebb 100%); }
+        .project-image.gradient-4 { background: linear-gradient(185deg, #a8a6a3 0%, #949290 100%); }
+        .project-image.gradient-5 { background: linear-gradient(177deg, #bcbab7 0%, #a09e9b 100%); }
+        .project-image.gradient-6 { background: linear-gradient(183deg, #cccac7 0%, #b4b2af 100%); }
+
+        .project-content {
+            padding: 2rem 2.25rem;
+            background: white;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex: 1;
+        }
+
+        .project-info {
+            flex: 1;
+        }
+
+        .project-title {
+            font-size: 1.35rem;
+            margin-bottom: 0.85rem;
+            color: #2a2a2a;
+            font-weight: 400;
+            font-family: 'Georgia', serif;
+            letter-spacing: 0.3px;
+            line-height: 1.4;
+        }
+
+        .project-description {
+            color: #5a5a5a;
+            font-size: 0.95rem;
+            line-height: 1.75;
+            margin-bottom: 1.15rem;
+            font-family: 'Georgia', serif;
+        }
+
+        .project-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: auto;
+            padding-top: 0.5rem;
+        }
+
+        .tags-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .github-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.55rem 1.15rem;
+            background: transparent;
+            color: #2a2a2a;
+            border-radius: 0;
+            font-size: 0.8rem;
+            font-weight: 600;
+            transition: none;
+            border: 1px solid #2a2a2a;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            white-space: nowrap;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 0.35rem 0.85rem;
+            background: transparent;
+            color: #5a5a5a;
+            border-radius: 0;
+            font-size: 0.7rem;
+            font-weight: 600;
+            border: 1px solid #d4d2cf;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            color: #5a5a5a;
+            margin-top: 4rem;
+            font-weight: 300;
+            font-style: italic;
+            border-top: 2px solid #d4d2cf;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 3rem 1.5rem;
+            }
+
+            .project-card {
+                flex-direction: column;
+                min-height: auto;
+            }
+
+            .project-image {
+                width: 100%;
+                min-width: 100%;
+                height: 200px;
+                border-right: none;
+                border-bottom: 1px solid #d4d2cf;
+            }
+            
+            header h1 {
+                font-size: 2.5rem;
+                letter-spacing: 2px;
+            }
+
+            .project-content {
+                padding: 1.75rem 1.5rem;
+            }
+
+            .project-footer {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .tags-container {
+                order: 2;
+            }
+
+            .github-link {
+                order: 1;
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        /* Remove stagger animation */
+        .project-card {
+            animation: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Your Name</h1>
+        <p>Engineering & Design</p>
+    </header>
+
+    <div class="container">
+        <div class="projects-grid">
+            <!-- Project 1: PCB Design -->
+            <a href="https://github.com/yourusername/pcb-design" class="project-card" target="_blank">
+                <div class="project-image gradient-1">
+                    <!-- Replace the emoji below with <img src="your-image.jpg" alt="Project"> to use a photo -->
+                    🔌
+                </div>
+                <div class="project-content">
+                    <div class="project-info">
+                        <h2 class="project-title">PCB Design with ATmega32U4</h2>
+                        <p class="project-description">
+                            Designed, routed, and assembled a custom PCB featuring the ATmega32U4 microcontroller for embedded applications.
+                        </p>
+                    </div>
+                    <div class="project-footer">
+                        <div class="tags-container">
+                            <span class="tag">PCB Design</span>
+                            <span class="tag">Circuit Design</span>
+                            <span class="tag">Arduino</span>
+                        </div>
+                        <span class="github-link">View Project →</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Project 2: Injection Mold -->
+            <a href="https://github.com/yourusername/injection-mold" class="project-card" target="_blank">
+                <div class="project-image gradient-2">
+                    <!-- Replace the emoji below with <img src="your-image.jpg" alt="Project"> to use a photo -->
+                    🏭
+                </div>
+                <div class="project-content">
+                    <div class="project-info">
+                        <h2 class="project-title">Injection Mold Design</h2>
+                        <p class="project-description">
+                            Designed an injection mold to create HDPE plastic coasters, including mold flow simulation and manufacturability analysis.
+                        </p>
+                    </div>
+                    <div class="project-footer">
+                        <div class="tags-container">
+                            <span class="tag">CAD</span>
+                            <span class="tag">Manufacturing</span>
+                            <span class="tag">Plastic</span>
+                        </div>
+                        <span class="github-link">View Project →</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Project 3: Benchtop Power Supply -->
+            <a href="https://github.com/yourusername/power-supply" class="project-card" target="_blank">
+                <div class="project-image gradient-3">
+                    <!-- Replace the emoji below with <img src="your-image.jpg" alt="Project"> to use a photo -->
+                    ⚡
+                </div>
+                <div class="project-content">
+                    <div class="project-info">
+                        <h2 class="project-title">Benchtop Power Supply</h2>
+                        <p class="project-description">
+                            Designing, manufacturing, and building a benchtop power supply for electronics projects and repairs with adjustable voltage and current limiting.
+                        </p>
+                    </div>
+                    <div class="project-footer">
+                        <div class="tags-container">
+                            <span class="tag">Power Electronics</span>
+                            <span class="tag">Circuit Design</span>
+                            <span class="tag">Embedded Systems</span>
+                        </div>
+                        <span class="github-link">View Project →</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Project 4: CNC Automation -->
+            <a href="https://github.com/yourusername/cnc-automation" class="project-card" target="_blank">
+                <div class="project-image gradient-4">
+                    <!-- Replace the emoji below with <img src="your-image.jpg" alt="Project"> to use a photo -->
+                    🔧
+                </div>
+                <div class="project-content">
+                    <div class="project-info">
+                        <h2 class="project-title">Machine Code Extraction Tool</h2>
+                        <p class="project-description">
+                            Created a Python automation tool to parse CNC programs and assist in manufacturing calculations, streamlining production workflows.
+                        </p>
+                    </div>
+                    <div class="project-footer">
+                        <div class="tags-container">
+                            <span class="tag">Python</span>
+                            <span class="tag">Automation</span>
+                            <span class="tag">CNC</span>
+                        </div>
+                        <span class="github-link">View Project →</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Project 5: Mechanical Test Frame -->
+            <a href="https://github.com/yourusername/testing-rig" class="project-card" target="_blank">
+                <div class="project-image gradient-5">
+                    <!-- Replace the emoji below with <img src="your-image.jpg" alt="Project"> to use a photo -->
+                    🏗️
+                </div>
+                <div class="project-content">
+                    <div class="project-info">
+                        <h2 class="project-title">Mechanical Test Frame</h2>
+                        <p class="project-description">
+                            Designed and built a test frame for material fatigue testing, enabling controlled stress analysis of various materials and components.
+                        </p>
+                    </div>
+                    <div class="project-footer">
+                        <div class="tags-container">
+                            <span class="tag">Mechanical Design</span>
+                            <span class="tag">Materials</span>
+                            <span class="tag">Circuit Design</span>
+                        </div>
+                        <span class="github-link">View Project →</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Your Name</p>
+    </footer>
+</body>
+</html>
