@@ -57,26 +57,8 @@
             box-shadow: 0 0 0 1px var(--color-bg);
         }
 
-        .cursor-follower {
-            width: 44px;
-            height: 44px;
-            border: 1.5px solid var(--color-text);
-            border-radius: 50%;
-            position: fixed;
-            pointer-events: none;
-            z-index: 9998;
-            transition: all 0.3s cubic-bezier(0.75, 0, 0.27, 1);
-            opacity: 0.6;
-        }
-
         .cursor.active {
             transform: scale(0.5);
-        }
-
-        .cursor-follower.active {
-            transform: scale(1.5);
-            border-color: var(--color-accent);
-            opacity: 1;
         }
 
         /* Grid overlay */
@@ -543,7 +525,7 @@
                 grid-column: span 12;
             }
 
-            .cursor, .cursor-follower {
+            .cursor {
                 display: none;
             }
 
@@ -567,26 +549,25 @@
 </head>
 <body>
     <div class="cursor"></div>
-    <div class="cursor-follower"></div>
 
     <nav>
         <div class="nav-logo">Noah Greskiewicz</div>
         <ul class="nav-menu">
             <li><a href="#work">Work</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="mailto:noah@example.com">Contact</a></li>
+            <li><a href="mailto:noahgreskiewicz@gmail.com">Contact</a></li>
         </ul>
     </nav>
 
     <section class="hero">
         <h1 class="hero-title">
-            Mechanical engineer <span class="highlight">designing</span><br>
-            solutions at the intersection<br>
-            of hardware and software.
+            Mechanical engineering student <span class="highlight">building</span><br>
+            open-source hardware<br>
+            with integrated electronics.
         </h1>
         <p class="hero-subtitle">
             Currently studying at Worcester Polytechnic Institute, exploring circuit design, 
-            manufacturing processes, and embedded systems through hands-on projects.
+            manufacturing processes, and embedded systems through projects.
         </p>
         <div class="hero-meta">
             <div class="hero-meta-item">
@@ -727,9 +708,9 @@
             <div class="footer-col">
                 <h4 class="footer-title">Connect</h4>
                 <ul class="footer-links">
-                    <li><a href="mailto:noah@example.com">Email</a></li>
-                    <li><a href="https://github.com/yourusername" target="_blank">GitHub</a></li>
-                    <li><a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a></li>
+                    <li><a href="mailto:noahgreskiewicz@gmail.com">Email</a></li>
+                    <li><a href="https://github.com/ngreskie" target="_blank">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/noah-greskiewicz-5b8b88225" target="_blank">LinkedIn</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -748,9 +729,7 @@
     <script>
         // Custom cursor
         const cursor = document.querySelector('.cursor');
-        const cursorFollower = document.querySelector('.cursor-follower');
         let mouseX = 0, mouseY = 0;
-        let followerX = 0, followerY = 0;
 
         document.addEventListener('mousemove', (e) => {
             mouseX = e.clientX;
@@ -758,14 +737,7 @@
         });
 
         function animateCursor() {
-            const speed = 0.15;
-            
-            followerX += (mouseX - followerX) * speed;
-            followerY += (mouseY - followerY) * speed;
-
             cursor.style.transform = `translate(${mouseX - 6}px, ${mouseY - 6}px)`;
-            cursorFollower.style.transform = `translate(${followerX - 22}px, ${followerY - 22}px)`;
-
             requestAnimationFrame(animateCursor);
         }
 
@@ -777,12 +749,10 @@
         links.forEach(link => {
             link.addEventListener('mouseenter', () => {
                 cursor.classList.add('active');
-                cursorFollower.classList.add('active');
             });
             
             link.addEventListener('mouseleave', () => {
                 cursor.classList.remove('active');
-                cursorFollower.classList.remove('active');
             });
         });
 
