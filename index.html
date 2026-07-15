@@ -143,23 +143,35 @@
         /* Hero Section */
         .hero {
             padding: 10rem 10rem 6rem;
-            display: flex;
-            flex-direction: column;
             position: relative;
         }
 
-        .hero-title {
-            font-family: var(--font-display);
-            font-size: clamp(3rem, 12vw, 8rem);
-            font-weight: 300;
-            line-height: 0.95;
-            margin-bottom: 1.5rem;
-            letter-spacing: -0.02em;
+        .hero-top {
+            display: flex;
+            align-items: center;
+            gap: 3.5rem;
         }
 
-        .hero-title .highlight {
-            color: var(--color-text-secondary);
-            font-style: italic;
+        .hero-photo {
+            flex-shrink: 0;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            overflow: hidden;
+            background: linear-gradient(135deg, #f5f5f4 0%, #e7e5e4 100%);
+            box-shadow: 0 0 0 1px var(--color-border);
+        }
+
+        .hero-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .hero-info {
+            flex: 1;
+            min-width: 0;
         }
 
         .hero-subtitle {
@@ -167,7 +179,7 @@
             font-size: clamp(1.125rem, 2vw, 1.5rem);
             color: var(--color-text-secondary);
             line-height: 1.6;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
 
         .hero-meta {
@@ -499,6 +511,12 @@
                 padding: 6rem 1.5rem 3rem;
             }
 
+            .hero-top {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1.5rem;
+            }
+
             .hero-meta {
                 flex-direction: column;
                 gap: 1.5rem;
@@ -565,27 +583,32 @@
     </nav>
 
     <section class="hero">
-        <h1 class="hero-title">Noah Greskiewicz</h1>
-
-        <p class="hero-subtitle">
-            Mechanical Engineering student at Worcester Polytechnic Institute.
-        </p>
-        <div class="hero-meta">
-            <div class="hero-meta-item">
-                <span class="hero-meta-label">Software</span>
-                <span>SolidWorks, KiCAD</span>
+        <div class="hero-top">
+            <div class="hero-photo">
+                <img src="/assets/images/me.jpg" alt="Noah Greskiewicz">
             </div>
-            <div class="hero-meta-item">
-                <span class="hero-meta-label">Programming</span>
-                <span>Python, Arduino</span>
-            </div>
-            <div class="hero-meta-item">
-                <span class="hero-meta-label">Hardware</span>
-                <span>PCB Assembly, Device Repair</span>
-            </div>
-            <div class="hero-meta-item">
-                <span class="hero-meta-label">Media</span>
-                <span>Typst, Adobe Suit, Davinci Resolve</span>
+            <div class="hero-info">
+                <p class="hero-subtitle">
+                    Mechanical Engineering student at Worcester Polytechnic Institute.
+                </p>
+                <div class="hero-meta">
+                    <div class="hero-meta-item">
+                        <span class="hero-meta-label">Software</span>
+                        <span>SolidWorks, KiCAD</span>
+                    </div>
+                    <div class="hero-meta-item">
+                        <span class="hero-meta-label">Programming</span>
+                        <span>Python, Arduino</span>
+                    </div>
+                    <div class="hero-meta-item">
+                        <span class="hero-meta-label">Hardware</span>
+                        <span>PCB Assembly, Device Repair</span>
+                    </div>
+                    <div class="hero-meta-item">
+                        <span class="hero-meta-label">Media</span>
+                        <span>Typst, Adobe Suit, Davinci Resolve</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
