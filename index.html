@@ -384,18 +384,15 @@
             display: grid;
             grid-template-columns: repeat(12, 1fr);
             gap: 2rem;
-            border-top: 2px solid transparent;
-            background: linear-gradient(var(--color-bg), var(--color-bg)) padding-box,
-                        linear-gradient(90deg, var(--color-accent-blue), rgba(32, 43, 71, 0.2), transparent) border-box;
             position: relative;
         }
 
         .about::before {
             content: '';
             position: absolute;
-            top: -2px;
-            left: 0;
-            right: 0;
+            top: 0;
+            left: 10rem;
+            right: 10rem;
             height: 2px;
             background: linear-gradient(90deg, transparent, rgba(32, 43, 71, 0.5), transparent);
         }
@@ -426,9 +423,17 @@
             max-width: 1600px;
             margin: 0 auto;
             padding: 4rem 3rem;
-            border-top: 2px solid transparent;
-            background: linear-gradient(var(--color-bg), var(--color-bg)) padding-box,
-                        linear-gradient(90deg, transparent, var(--color-accent-blue), rgba(32, 43, 71, 0.2)) border-box;
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 10rem;
+            right: 10rem;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--color-accent-blue), transparent);
         }
 
         .footer-content {
@@ -478,6 +483,11 @@
             }
             .hero {
                 padding: 10rem 4rem 6rem;
+            }
+            .about::before,
+            footer::before {
+                left: 4rem;
+                right: 4rem;
             }
             .projects-grid {
                 grid-template-columns: repeat(6, 1fr);
@@ -536,6 +546,12 @@
 
             .about {
                 padding: 6rem 1.5rem;
+            }
+
+            .about::before,
+            footer::before {
+                left: 1.5rem;
+                right: 1.5rem;
             }
 
             .about-content {
