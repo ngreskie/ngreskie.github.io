@@ -240,22 +240,6 @@
             overflow: hidden;
         }
 
-        .section-label::before {
-            content: '';
-            position: absolute;
-            right: 0;
-            width: 200px;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, rgba(32, 43, 71, 0.4), transparent);
-            animation: shimmerLine 3s ease-in-out infinite;
-            pointer-events: none;
-        }
-
-        @keyframes shimmerLine {
-            0%, 100% { transform: translateX(-200px); opacity: 0; }
-            50% { transform: translateX(400px); opacity: 1; }
-        }
-
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(12, 1fr);
@@ -413,13 +397,7 @@
             left: 0;
             right: 0;
             height: 2px;
-            background: linear-gradient(90deg, transparent, rgba(32, 43, 71, 0.3), transparent);
-            animation: borderGlow 4s ease-in-out infinite;
-        }
-
-        @keyframes borderGlow {
-            0%, 100% { opacity: 0; }
-            50% { opacity: 1; }
+            background: linear-gradient(90deg, transparent, rgba(32, 43, 71, 0.5), transparent);
         }
 
         .about-content {
